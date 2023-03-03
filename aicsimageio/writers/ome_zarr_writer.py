@@ -289,7 +289,7 @@ class OmeZarrWriter:
         scale_factor: Tuple[float, float, float] = (2.0, 2.0, 2.0),
         chunks: Optional[tuple] = None,
         storage_options: Optional[Dict] = None,
-        compute_dask:bool=False,
+        compute:bool=False,
         **metadata: Union[str, Dict[str, Any], List[Dict[str, Any]]]
     ) -> List:
 
@@ -335,7 +335,7 @@ class OmeZarrWriter:
             coordinate_transformations=transforms,
             storage_options=chunk_opts,
             name=None,
-            compute_dask=compute_dask,
+            compute=compute,
             **metadata
         )
         
